@@ -19,7 +19,7 @@ describe('Login page testing', () => {
         await expect(LoginPage.passwordUnique).toHaveTextContaining('Password for all users:');
     });
     it('Login success', async () => {
-        await LoginPage.login('standard_user','secret_sauce');
+        await LoginPage.login('performance_glitch_user','secret_sauce');
     });
     describe('Inventory page testing', () => {
         it('Img and titles displayed', async () => {
