@@ -3,17 +3,12 @@ class CheckoutPage{
     get inputFirstName() { return $('#first-name'); };
     get inputLastName() { return $('#last-name'); };
     get inputPostalCode() { return $('#postal-code'); };
-    // get errorCont() { return $('.error-message-container'); };
-    // get crossBtn() { return $('.error-button'); };
-    // get errorX1() { return $('div.form_group:nth-child(1) > svg:nth-child(2) > path:nth-child(1)'); };
-    // get errorX2() { return $('div.form_group:nth-child(2) > svg:nth-child(2)'); };
-    // get errorX3() { return $('div.form_group:nth-child(3) > svg:nth-child(2) > path:nth-child(1)'); };
     get cancelBtn() { return $('#cancel'); };
     get continueBtn() { return $('#continue'); };
     get finishBtn() { return $('#finish'); };
     get pageTitle() { return $('.title'); };
-    // get imgFinish() { return $('.pony_express'); };
-    // get backHomeBtn() { return $('#back-to-products'); };
+    get img() { return $('.pony_express'); };
+    get backHomeBtn() { return $('#back-to-products'); };
 
     // Setters
     async setFirstName(firstname) {
@@ -35,7 +30,10 @@ class CheckoutPage{
     };
     async checkoutFinishClickBtn() {
         await this.finishBtn.click();
-    }
+    };
+    async backHomeClickBtn() {
+        await this.backHomeBtn.click();
+    };
 };
 
 module.exports = new CheckoutPage();

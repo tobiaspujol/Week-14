@@ -78,12 +78,16 @@ describe('Login page testing', () => {
             });
         });
         describe ('Checkout overview page testing', ()=> {
-            it('Finish the buy', async () => {
+            it('Buttons displayed and order finished', async () => {
                 await expect(CheckoutPage.pageTitle).toHaveText('CHECKOUT: OVERVIEW');
                 await expect(CheckoutPage.finishBtn).toBeDisplayed();
                 await expect(CheckoutPage.cancelBtn).toBeDisplayed();
                 await CheckoutPage.checkoutFinishClickBtn();
+                await expect(CheckoutPage.pageTitle).toHaveText('CHECKOUT: COMPLETE!');
+                await expect(CheckoutPage.img).toBeDisplayed();
+                await expect(CheckoutPage.backHomeBtn).toBeDisplayed();
+                await CheckoutPage.backHomeClickBtn();
             });
-        })
+        });
     });
 });

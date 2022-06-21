@@ -7,6 +7,7 @@ class LoginPage{
     get imgRobot() { return $('.bot_column'); };
     get usernamesList() { return $('#login_credentials'); };
     get passwordUnique() { return $('.login_password'); };
+    get errorMessage() { return $('.error-message-container.error')};
 
     // Setters
     async setUsername(username) {
