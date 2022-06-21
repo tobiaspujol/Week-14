@@ -22,6 +22,6 @@ class LoginPage{
         await this.setPassword(password);
         await this.btnLogin.click();
     };
-}
+};
 
 module.exports = new LoginPage();
